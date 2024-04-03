@@ -2,20 +2,15 @@
   "name": "project",
   "tree": {
     "$className": "DataModel",
-    "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/ReplicatedStorage"
-    },
     "ServerScriptService": {
       "$className": "ServerScriptService",
       "$ignoreUnknownInstances": true,
       "$path": "src/ServerScriptService"
     },
-    "ServerStorage": {
-      "$className": "ServerStorage",
+    "StarterGui": {
+      "$className": "StarterGui",
       "$ignoreUnknownInstances": true,
-      "$path": "src/ServerStorage"
+      "$path": "src/StarterGui"
     },
     "StarterPlayer": {
       "$className": "StarterPlayer",
