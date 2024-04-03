@@ -12,8 +12,12 @@ function playerJoined(player)
 
             -- Listening to custom event
             JumpedEvent123.Event:Connect(function()
-                -- Printing the amount of times the player jumped                
-                print(player.Name .. " jumped! " .. timesJumpedEvent123:Invoke() .. " times!")
+                -- Changing head size
+                local headScale = math.floor(timesJumpedEvent123:Invoke() / 5) + 1
+                local scaleValue = humanoid:FindFirstChild("HeadScale")
+                if scaleValue ~= nil then
+                    scaleValue.Value = headScale
+                end
             end)
         end
     end
