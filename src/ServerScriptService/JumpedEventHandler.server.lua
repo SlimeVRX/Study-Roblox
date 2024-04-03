@@ -3,11 +3,14 @@
 local Players = game:GetService("Players")
 
 function findPlayer()
-    local player = Players:FindFirstChildOfClass("Player")
-    if player ~= nil then
+    -- Getting all players in the game
+    local player = Players:GetPlayers()
+
+    -- Looping through all players
+    for i, player in ipairs(player) do
         print("Found player: " .. player.Name)
-    end
+    end    
 end
 
-task.wait(5)
+task.wait(1)
 findPlayer()
