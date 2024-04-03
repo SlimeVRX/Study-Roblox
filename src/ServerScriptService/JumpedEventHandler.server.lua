@@ -8,7 +8,12 @@ function playerJoined(player)
         -- Getting the Humanoid
         local humanoid = character:FindFirstChildOfClass("Humanoid")
         if humanoid ~= nil then
-            print("Humanoid found!")
+            -- Listening to the Jump property
+            humanoid:GetPropertyChangedSignal("Jump"):Connect(function()
+                if humanoid.Jump then
+                    print(player.Name .. " jumped!")
+                end
+            end)
         end
     end
 
