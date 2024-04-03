@@ -3,7 +3,13 @@
 local Players = game:GetService("Players")
 
 function playerJoined(player)
-    print(player.Name .. " has joined the game!")
+    -- Nested function
+    local function characterAdded(character)
+        print(character.Name .. " has spawned!")
+    end
+
+    -- Listen for the .characterAdded event
+    player.CharacterAdded:Connect(characterAdded)
 end
 
 Players.PlayerAdded:Connect(playerJoined)
