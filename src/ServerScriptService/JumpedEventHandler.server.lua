@@ -5,7 +5,11 @@ local Players = game:GetService("Players")
 function playerJoined(player)
     -- Nested function
     local function characterAdded(character)
-        print(character.Name .. " has spawned!")
+        -- Getting the Humanoid
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid ~= nil then
+            print("Humanoid found!")
+        end
     end
 
     -- Listen for the .characterAdded event
