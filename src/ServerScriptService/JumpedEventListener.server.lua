@@ -7,13 +7,14 @@ function playerJoined(player)
         local humanoid = character:FindFirstChildOfClass("Humanoid")
         if humanoid ~= nil then
             -- Waiting for the Jumped123 event
-            local Jumped123Event = humanoid:WaitForChild("Jumped123")
+            local JumpedEvent123 = humanoid:WaitForChild("Jumped123")
+            local timesJumpedEvent123 = humanoid:WaitForChild("TimesJumped123")
 
             -- Listening to custom event
-            Jumped123Event.Event:Connect(function()
-                print(player.Name .. " jumped!")
+            JumpedEvent123.Event:Connect(function()
+                -- Printing the amount of times the player jumped                
+                print(player.Name .. " jumped! " .. timesJumpedEvent123:Invoke() .. " times!")
             end)
-
         end
     end
 
